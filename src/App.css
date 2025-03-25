@@ -1,0 +1,37 @@
+body {
+  z-index:-999;
+    background: linear-gradient(180deg, #000026, #020012);
+    background-size:cover;
+    background-repeat: no-repeat;
+    height: 100%;
+    color: white; /* Ensures text is visible on dark background */
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif; /* Optional: Choose a readable font */
+  }
+  .gradient-text {
+    background: linear-gradient(180deg, #ffffff, #37cced);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+  }
+  .loader-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+  }
+  
+  .loader {
+    border: 6px solid #f3f3f3;
+    border-top: 6px solid #5dc4e1; /* Magenta Color */
+    border-radius: 50%;
+    width: 40px;
+    height: 40px;
+    animation: spin 1s linear infinite;
+  }
+  
+  @keyframes spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+  }  

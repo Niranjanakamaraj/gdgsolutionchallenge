@@ -1,0 +1,162 @@
+/* Apply a gradient background to the entire home container */
+.home-container {
+    text-align: center;
+    color: white;
+    background: linear-gradient(180deg, #00002c, #020012);
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 20px;
+  }
+  
+  /* Hero Section Styling */
+  .hero-section h1 {
+    font-size: 8rem;
+    font-weight: bold;
+    background-color:linear-gradient(180deg, #ffffff, #37cced);
+    margin-bottom: 20px;
+    padding:20px;
+  }
+  
+  .researcher img {
+    width: 1500px;;
+    height: auto;
+    margin: 20px 0;
+  }
+  
+  /* Features Section */
+  .features {
+    text-align: center;
+    margin-top: 40px;
+    padding: 40px;
+  }
+  
+  .features h2 {
+    font-size: 3rem;
+    background: linear-gradient(180deg, #ffffff, #37cced);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    margin-bottom: 40px;
+  }
+  
+  .feature-buttons {
+    padding:20px;
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    flex-wrap: wrap;
+  }
+  
+  /* Gradient Buttons */
+  .feature-buttons button {
+    background: linear-gradient(180deg, #ffffff, #37cced);
+    color: rgb(0, 0, 0);
+    border: none;
+    padding: 20px 25px;
+    font-size: 30px;
+    font-weight: bold;
+    cursor: pointer;
+    border-radius: 10px;
+    transition: 0.4s;
+    box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.2);
+    outline: none;
+  }
+  
+  .feature-buttons button:hover {
+    background: linear-gradient(180deg, #ffffff, #37cced);
+    transform: scale(1.05);
+    box-shadow: 0px 8px 20px rgba(0, 0, 0, 0.3);
+  }
+  
+  /* Mission Section */
+  .mission-section {
+    text-align: center;
+    padding: 30px;
+    margin-top: 40px;
+    max-width: 800px;
+    background: rgba(255, 255, 255, 0.2);
+    border-radius: 15px;
+    box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.2);
+  }
+  
+  .mission-section h2 {
+    font-size: 2rem;
+    margin-bottom: 15px;
+    background: linear-gradient(180deg, #ffffff, #37cced);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+  }
+  
+  .mission-section p {
+    font-size: 1.2rem;
+    line-height: 1.6;
+  }  
+/* CTA Section */
+.cta-section {
+  text-align: center;
+  margin: 10px 0;
+  padding: 40px;
+  color: white;
+}
+
+.cta-section h2 {
+  background-color:linear-gradient(180deg, #ffffff, #37cced);
+  font-size: 2.5rem;
+  margin-bottom: 15px;
+}
+
+.cta-section p {
+  font-size: 1.5rem;
+  margin-bottom: 20px;
+}
+
+/* CTA Button */
+.cta-button {
+  background: linear-gradient(180deg, #ffffff, #37cced);
+  color: black;
+  border: none;
+  padding: 15px 30px;
+  font-size: 1.2rem;
+  font-weight: bold;
+  cursor: pointer;
+  border-radius: 10px;
+  transition: 0.4s;
+  box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.2);
+  outline: none;
+}
+
+.cta-button:hover {
+  transform: scale(1.05);
+  box-shadow: 0px 8px 20px rgba(0, 0, 0, 0.3);
+}
+
+/* Footer Section */
+.footer {
+  width:100%;
+  text-align: center;
+  padding: 20px;
+  margin-top: 50px;
+  font-size: 1.2rem;
+  border-top: 2px solid #37cced;
+  border-bottom:2px solid #37cced;
+}
+
+.footer-links {
+  margin-top: 10px;
+  display: flex;
+  justify-content: center;
+  gap: 15px;
+}
+
+.footer-links a {
+  color: #37cced;
+  text-decoration: none;
+  transition: 0.3s;
+}
+
+.footer-links a:hover {
+  color: white;
+  text-decoration: underline;
+}

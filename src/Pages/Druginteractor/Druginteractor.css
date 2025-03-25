@@ -1,0 +1,110 @@
+/* Container styling */
+.interaction-container {
+    color: white;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 2rem;
+    overflow:hidden;
+  }
+  .crystal{
+    width:100vw;
+    height:300px;
+    background:no-repeat center center/cover;
+    display: flex;
+    flex-direction:column;
+    justify-content: center;
+    position:relative;
+    align-items: center; 
+    z-index: -1;
+  }
+  .crystal img{
+    width:100%;
+    height:50%;
+    object-fit:cover;
+  }
+  /* Header */
+  h1 {
+    z-index:100;
+    font-size: 5rem;
+    background: linear-gradient(90deg, #7ed6df, #ff00ff);
+    -webkit-background-clip: text;
+    color: transparent;
+  }
+  
+  /* Input Section */
+  .input-section {
+    position: absolute; /* Layer the input on top */
+  top: 50%; /* Adjust vertical position */
+  left: 50%; /* Center horizontally */
+  transform: translateX(-50%); /* Ensure perfect center */
+  z-index: 10; /* Bring it to the front */
+  display: flex;
+  gap: 10px;
+  background: rgba(99, 3, 81, 0.459); /* Semi-transparent background */
+  padding: 10px;
+  border-radius: 10px; /* Rounded corners */
+  }
+  
+  .input-section input {
+
+    border-radius: 10px;
+    border: none;
+    outline: none;
+    font-size:2rem;
+    background: rgba(100, 3, 97, 0.493);
+    color: white;
+    width: 700px;
+  }
+  
+  .input-section button {
+    background: #04002e;
+    color:#ffffff;
+    border: none;
+    height: 70px;
+    padding: 0.8rem 1.5rem;
+    border-radius:10px;
+    cursor: pointer;
+    transition: transform 0.3s;
+    font-weight: bold;
+  }
+  
+  .input-section button:hover {
+    transform: scale(1.1);
+  }
+  
+  /* Molecule List */
+  .molecule-list {
+    margin-top: 2rem;
+    display: flex;
+    gap: 1rem;
+    flex-wrap: wrap;
+  }
+  
+  .molecule-item {
+    background: rgba(255, 255, 255, 0.2);
+    padding: 0.5rem 1rem;
+    border-radius: 10px;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+  }
+  
+  .remove-btn {
+    cursor: pointer;
+    color: #ff4757 !important;
+  }
+  
+  /* Interaction Result */
+  .interaction-result {
+    margin-top: 3rem;
+  }
+  
+  .interaction-result h2 {
+    font-size: 2rem;
+  }
+  
+  .interaction-result p {
+    font-size: 1.2rem;
+    margin: 0.5rem 0;
+  }  

@@ -1,0 +1,85 @@
+  .body {
+    background: linear-gradient(180deg, #000035, #020012);
+    background-size:cover;
+    background-repeat: no-repeat;
+    height: 100vh;
+    color: rgb(255, 255, 255); /* Ensures text is visible on dark background */
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif; /* Optional: Choose a readable font */
+  }
+  /* Search Section */
+  .search-section {
+    text-align: center;
+    margin-top: 50px;
+  }
+  .input-group {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    margin-top: 10px;
+  }
+  
+  .input-group input {
+    padding: 10px;
+    background: -webkit-linear-gradient(50deg, #ffffff, #37cced);
+    background: linear-gradient(80deg, #b0effd, #37cced);
+    width: 250px;
+    border: none;
+    border-radius:10px;
+  }
+  
+  .input-group button {
+    padding: 10px;
+    background-color: rgba(213, 136, 251, 0.984);
+    border: none;
+    cursor: pointer;
+    border-radius:10px;
+  }
+  
+  .search-btn {
+    margin-top: 15px;
+    padding: 10px 20px;
+    background-color: lightblue;
+    border: none;
+    cursor: pointer;
+  }
+  
+  /* Comparison Section */
+  .comparison-section {
+    background:linear-gradient(150deg, #ffffff, #37cced);
+    text-align: center;
+    margin-top: 100px;
+    color:#020012;
+  }
+  .comparison-section h1{
+    padding-top:60px;
+  }
+  .comparison-section h2{
+    padding-top:30px;
+    color:red;
+  }
+  .drug-cards {
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    margin-top: 40px;
+    max-width:100vw;
+    padding: 20px;
+  }
+  
+  .drug-card {
+    background-color:rgb(32, 18, 47);
+    color:#ffffff;
+    padding: 35px;
+    max-width:50vw;
+    text-align: left;
+  }  
+  .transparent-line {
+    border: none;
+    height: 4px;
+    background: rgb(255, 255, 255); /* White with 30% opacity */
+    width: 100%;
+    margin: 20px 0;
+  }
+  
