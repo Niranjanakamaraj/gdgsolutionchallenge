@@ -1,85 +1,164 @@
-  .body {
-    background: linear-gradient(180deg, #000035, #020012);
-    background-size:cover;
-    background-repeat: no-repeat;
-    height: 100vh;
-    color: rgb(255, 255, 255); /* Ensures text is visible on dark background */
-    margin: 0;
-    padding: 0;
-    font-family: Arial, sans-serif; /* Optional: Choose a readable font */
-  }
-  /* Search Section */
-  .search-section {
-    text-align: center;
-    margin-top: 50px;
-  }
-  .input-group {
-    display: flex;
-    justify-content: center;
-    gap: 10px;
-    margin-top: 10px;
-  }
-  
-  .input-group input {
-    padding: 10px;
-    background: -webkit-linear-gradient(50deg, #ffffff, #37cced);
-    background: linear-gradient(80deg, #b0effd, #37cced);
-    width: 250px;
-    border: none;
-    border-radius:10px;
-  }
-  
-  .input-group button {
-    padding: 10px;
-    background-color: rgba(213, 136, 251, 0.984);
-    border: none;
-    cursor: pointer;
-    border-radius:10px;
-  }
-  
-  .search-btn {
-    margin-top: 15px;
-    padding: 10px 20px;
-    background-color: lightblue;
-    border: none;
-    cursor: pointer;
-  }
-  
-  /* Comparison Section */
-  .comparison-section {
-    background:linear-gradient(150deg, #ffffff, #37cced);
-    text-align: center;
-    margin-top: 100px;
-    color:#020012;
-  }
-  .comparison-section h1{
-    padding-top:60px;
-  }
-  .comparison-section h2{
-    padding-top:30px;
-    color:red;
-  }
-  .drug-cards {
-    display: flex;
-    justify-content: center;
-    gap: 30px;
-    margin-top: 40px;
-    max-width:100vw;
-    padding: 20px;
-  }
-  
-  .drug-card {
-    background-color:rgb(32, 18, 47);
-    color:#ffffff;
-    padding: 35px;
-    max-width:50vw;
-    text-align: left;
-  }  
-  .transparent-line {
-    border: none;
-    height: 4px;
-    background: rgb(255, 255, 255); /* White with 30% opacity */
-    width: 100%;
-    margin: 20px 0;
-  }
-  
+/* Body and Background */
+.body {
+  background: linear-gradient(180deg, #010118, #020012);
+  background-size: cover;
+  background-repeat: no-repeat;
+  height: 100vh;
+  color: #fff;
+  margin: 0;
+  padding: 0;
+  font-family: Arial, sans-serif;
+  overflow-y: auto;
+}
+
+/* Layout Container */
+.container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 50px 80px;
+}
+
+/* Left Section */
+.left-section {
+  max-width: 50%;
+}
+
+/* Title */
+.title {
+  font-size: 5rem;
+  font-weight: bold;
+  margin-bottom: 20px;
+}
+
+/* Subtitle */
+.sub-text {
+  font-size: 1.2rem;
+  margin-bottom: 30px;
+}
+
+/* Input Group */
+.input-group {
+  display: flex;
+  gap: 15px;
+  margin-top: 20px;
+}
+
+.input-group input {
+  padding: 15px;
+  width: 60%;
+  font-size: 1rem;
+  background:#000000;
+  color: #ffffff;
+  outline: none;
+}
+
+.input-group button {
+  padding: 15px 30px;
+  background: linear-gradient(80deg, #b0effd, #37cced);
+  border: none;
+  cursor: pointer;
+  font-size: 1rem;
+  transition: transform 0.2s ease;
+}
+
+.input-group button:hover {
+  transform: scale(1.1);
+}
+
+/* Search Button */
+.search-btn {
+  margin-top: 30px;
+  padding: 15px 40px;
+  background-color: rgba(213, 136, 251, 0.984);
+  border: none;
+  border-radius: 20px;
+  font-size: 1.2rem;
+  cursor: pointer;
+  transition: transform 0.2s ease;
+}
+
+.search-btn:hover {
+  transform: scale(1.1);
+}
+
+/* Right Section - DNA Image */
+.right-section {
+  max-width: 50%;
+}
+
+.dna-image {
+  width: 100%;
+  max-height: 500px;
+  object-fit: contain;
+}
+
+/* Comparison Section */
+.comparison-section {
+  background: linear-gradient(90deg, #C7BCF4, #F9C5B4);
+  text-align: center;
+  margin-top: 100px;
+  color: #020012;
+  padding: 40px 0;
+}
+
+.comparison-section h1 {
+  font-size: 6rem;
+  color: white;
+  padding-top: 60px;
+}
+
+.comparison-section h2 {
+  padding-top: 30px;
+  color: red;
+}
+
+/* Drug Cards */
+.drug-cards {
+  display: flex;
+  justify-content: center;
+  gap: 30px;
+  margin-top: 40px;
+  max-width: 100vw;
+  padding: 20px;
+  flex-wrap: wrap;
+}
+
+.drug-card {
+  background-color: rgb(36, 31, 42);
+  color: #ffffff;
+  padding: 35px;
+  max-width: 30vw;
+  text-align: left;
+}
+
+/* Horizontal Line */
+.transparent-line {
+  border: none;
+  height: 4px;
+  background: rgb(255, 255, 255);
+  width: 100%;
+  margin: 20px 0;
+}
+/* Section to show added drugs */
+.added-drugs {
+  margin-top: 20px;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+/* Style for each added drug */
+.added-drug {
+  padding: 10px 20px;
+  background: linear-gradient(80deg, #b0effd, #37cced);
+  color: #000035;
+  font-size: 1rem;
+  font-weight: bold;
+}
+
+/* Hover effect for added drugs */
+.added-drug:hover {
+  transform: scale(1.1);
+  transition: transform 0.2s ease;
+}

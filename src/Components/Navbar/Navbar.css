@@ -1,39 +1,48 @@
 /* Navbar Container */
 .navbar {
-  display:fixed;
+  display:sticky;
   justify-content: space-between;
   align-items: center;
-  padding: 1rem 2rem;
   background: black;
   color: white;
   position: sticky;
-  top: 0;
   z-index: 1000;
   background: rgba(0, 0, 0, 0.51);
   backdrop-filter: blur(10px);
+  max-height:100px;
 }
 
 /* Logo */
 .logo a {
   font-size: 3.8rem;
   text-decoration: none;
-  background: linear-gradient(90deg, #ff00ff, #7ed6df);
+  background: linear-gradient(90deg, #ffffff,#b9f3fe, #36ebff);
   -webkit-background-clip: text;
   color: transparent;
   font-weight: bold;
+  font-family: cursive,sans-serif !important;
+  overflow:hidden;
 }
-
+.logo img {
+  width:80px; /* Adjust size as needed */
+  height:80px;
+  border-radius: 100px;
+  margin-left: 10px;
+  margin-right:10px;
+}
 /* Navigation Links */
 .nav-links {
   display: flex;
-  gap: 4rem;
+  gap: 2rem;
   list-style: none;
+  border-color: #36ebff;
+  margin-right:20px;
 }
 
 .nav-links a {
   text-decoration: none;
   color: rgb(121, 237, 255);
-  font-size: 1.2rem;
+  font-size: 1.5rem;
   position: relative;
   transition: color 0.3s ease;
   font-weight: bold;

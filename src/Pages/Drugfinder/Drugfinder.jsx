@@ -98,13 +98,12 @@ const Drugfinder = () => {
             }
           }}
         />
-        <button className="button" onClick={handleSearch}>🔍</button>
       </div>
 
       {/* Display Drug Info */}
       {drug && (
         <div className="drug-info">
-          <h1 className="gradient-text">{drug.name}</h1>
+          <h1>{drug.name}</h1>
 
           {/* Drug Details (Single Column Format) */}
           <div className="drug-details">

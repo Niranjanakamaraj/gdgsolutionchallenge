@@ -6,34 +6,45 @@
   text-align: left;
 }
 
-/* Search Bar */
+/* Updated Search Bar Styling */
 .search-container {
   display: flex;
   justify-content: center;
   align-items: center;
-  margin: 30px 0;
+  margin: 50px 0;
 }
 
 .search-container input {
-  width: 1000px;
-  padding: 15px;
+  width: 900px; /* Adjust width as needed */
+  padding: 20px 30px;
   font-size: 48px;
-  border: none;
-  border-radius: 10px;
+  font-weight: bold;
+  border: 6px solid #43bcce; /* Magenta border */
+  border-radius: 50px;
   outline: none;
-  background: linear-gradient(180deg, #ffffff, #37cced);
-  color: rgb(0, 0, 0);
-  padding-left: 20px;
+  color: white; 
+  background: transparent; /* Transparent background */
 }
 
-.search-container button {
+.search-container input::placeholder {
+  color: white; /* White placeholder */
+  opacity: 0.8; /* Slight transparency */
+}
+
+.search-button {
+  font-size: 48px;
+  margin-left: -80px; /* Overlap with input */
+  cursor: pointer;
+  color: white; /* White icon */
   background: none;
   border: none;
-  font-size: 24px;
-  cursor: pointer;
-  margin-left: -50px;
-  color: white;
+  transition: transform 0.3s ease;
 }
+
+.search-button:hover {
+  transform: scale(1.1);
+}
+
 
 /* Drug Info Container */
 .drug-info {
@@ -103,14 +114,4 @@
   background: white;
   color: black;
   transform: scale(1.05);
-}
-.button{
-  font-size: 2rem; /* Increase the icon size */
-  padding: 15px 25px; /* Larger padding for bigger button */
-  border: none;
-  border-radius: 50%; /* Circular button */
-  background-color: #FF00FF; /* Magenta color */
-  color: white; /* White icon */
-  cursor: pointer;
-  transition: transform 0.3s ease;
 }
