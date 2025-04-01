@@ -1,76 +1,95 @@
 /* Navbar Container */
 .navbar {
-  display:sticky;
-  justify-content: space-between;
-  align-items: center;
-  background: black;
-  color: white;
-  position: sticky;
-  z-index: 1000;
-  background: rgba(0, 0, 0, 0.51);
+  display: flex; /* Ensures Flexbox layout */
+  justify-content: space-between; /* Space between logo and links */
+  align-items: center; /* Vertical alignment */
+  padding: 0 2rem; /* Horizontal padding */
+  background: rgba(0, 0, 0, 0.34);
   backdrop-filter: blur(10px);
-  max-height:100px;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  max-height: 120px; /* Fixed navbar height */
 }
 
-/* Logo */
+/* Logo Section */
+.logo {
+
+}
+
 .logo a {
   font-size: 3.8rem;
-  text-decoration: none;
-  background: linear-gradient(90deg, #ffffff,#b9f3fe, #36ebff);
+  background: linear-gradient(90deg, #ffffff, #b9f3fe, #36ebff);
   -webkit-background-clip: text;
   color: transparent;
   font-weight: bold;
-  font-family: cursive,sans-serif !important;
-  overflow:hidden;
+  font-family: cursive, sans-serif;
 }
+
 .logo img {
-  width:80px; /* Adjust size as needed */
-  height:80px;
-  border-radius: 100px;
-  margin-left: 10px;
-  margin-right:10px;
+  width: 100px; /* Adjust logo size */
+  height:100px;
+  border-radius: 50%;
+  padding:20px
 }
+
 /* Navigation Links */
 .nav-links {
   display: flex;
   gap: 2rem;
   list-style: none;
-  border-color: #36ebff;
-  margin-right:20px;
+  margin: 0;
+  padding: 0;
+  align-items: center;
 }
 
 .nav-links a {
   text-decoration: none;
   color: rgb(121, 237, 255);
   font-size: 1.5rem;
-  position: relative;
   transition: color 0.3s ease;
   font-weight: bold;
 }
 
-/* Hover Animation */
 .nav-links a:hover {
-  color: #ff00ff;
+  color: #ffffff;
+}
+
+/* Login Button */
+.login {
+  background-color: #36ebff;
+  color: black;
+  padding: 0.5rem 1rem;
+  border: none;
+  border-radius: 8px;
+  font-size: 1.2rem;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
+
+.login:hover {
+  background: #ffffff;
 }
 
 /* Hamburger Menu (Hidden on Desktop) */
 .hamburger {
   display: none;
-  flex-direction: column;
   cursor: pointer;
+  flex-direction: column;
+  gap: 5px;
 }
 
 .bar {
   width: 30px;
   height: 3px;
   background: white;
-  margin: 3px 0;
-  transition: 0.4s;
+  transition: transform 0.4s, opacity 0.4s;
 }
 
-/* Open State for Hamburger */
+/* Hamburger Animation */
 .bar.open:nth-child(1) {
-  transform: rotate(45deg) translate(5px, 5px);
+  transform: rotate(45deg) translate(5px, 6px);
 }
 
 .bar.open:nth-child(2) {
@@ -78,33 +97,39 @@
 }
 
 .bar.open:nth-child(3) {
-  transform: rotate(-45deg) translate(5px, -5px);
+  transform: rotate(-45deg) translate(5px, -6px);
 }
 
 /* Responsive Design */
 @media (max-width: 768px) {
   .hamburger {
-    display: flex;
+    display: flex; /* Show hamburger on small screens */
   }
 
   .nav-links {
     flex-direction: column;
     position: absolute;
-    top: 70px;
+    top: 100px;
     right: 0;
-    background: rgba(0, 0, 0, 0.9);
     width: 100%;
+    background: rgba(0, 0, 0, 0.9);
     height: 0;
     overflow: hidden;
-    transition: height 0.4s ease-in-out;
+    transition: height 0.4s ease;
+    align-items: center;
   }
 
   .nav-links.open {
-    height: 150px;
+    height: auto;
   }
 
   .nav-links li {
-    padding: 1rem;
+    padding: 1rem 0;
     text-align: center;
+  }
+
+  .login {
+    width: 80%;
+    margin-top: 1rem;
   }
 }

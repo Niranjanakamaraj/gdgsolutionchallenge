@@ -14,6 +14,7 @@ const Home = () => {
       setIsLoggedIn(true);
     }
   }, []);
+
   useEffect(() => {
     const sections = document.querySelectorAll(".hidden");
     const observer = new IntersectionObserver(
@@ -26,12 +27,8 @@ const Home = () => {
       },
       { threshold: 0.3 }
     );
+
     sections.forEach((section) => observer.observe(section));
-
-    return () => observer.disconnect();
-
-    const hiddenElements = document.querySelectorAll(".hidden, .slide-left, .slide-right, .fade-in");
-    hiddenElements.forEach((el) => observer.observe(el));
 
     return () => observer.disconnect();
   }, []);
@@ -39,9 +36,9 @@ const Home = () => {
   // Handle navigation based on login status
   const handleGetStarted = () => {
     if (isLoggedIn) {
-      navigate("/Login"); // Redirect logged-in users to dashboard
+      navigate("/login"); // Redirect logged-in users to login page
     } else {
-      navigate("/signup"); // New users to signup
+      navigate("/signup"); // New users go to signup page
     }
   };
 
@@ -49,7 +46,7 @@ const Home = () => {
     <div className="home-container">
       {/* Hero Section */}
       <section className="hero-section">
-        <h1 className="gradient-text">Research Made Easy !</h1>
+        <h1 className="gradient-text">Research Made Easy!</h1>
         <div className="researcher">
           <img src={researcher} alt="Homepage Banner" className="researcher-image" />
         </div>

@@ -21,17 +21,22 @@ const DrugInteraction = () => {
 
   return (
     <div className="interaction-container">
-      <h1>🔬 MOLECULAR INTERACTION</h1>
-      <div  className="Crystal" ><img src={Crystal} alt="Drug Background"/></div>
+      <div className="background-image">
+        <img src={Crystal} alt="Drug Background" />
+      </div>
+
+      {/* Header */}
+      <h1 className="drug-title">DRUG INTERACTOR</h1>
+
       {/* Input Section */}
       <div className="input-section">
         <input
           type="text"
           value={input}
           onChange={(e) => setInput(e.target.value)}
-          placeholder="Enter molecule name..."
+          placeholder="Search for a molecule..."
         />
-        <button onClick={addMolecule}>Add</button>
+        <button className="plus-button" onClick={addMolecule}>+</button>
       </div>
 
       {/* Molecule Display */}
@@ -39,7 +44,12 @@ const DrugInteraction = () => {
         {molecules.map((molecule, index) => (
           <div key={index} className="molecule-item">
             {molecule}
-            <span className="remove-btn" onClick={() => removeMolecule(molecule)}>✖</span>
+            <span
+              className="remove-btn"
+              onClick={() => removeMolecule(molecule)}
+            >
+              ✖
+            </span>
           </div>
         ))}
       </div>

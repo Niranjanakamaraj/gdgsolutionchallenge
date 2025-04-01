@@ -1,110 +1,138 @@
-/* Container styling */
+/* Main Container */
 .interaction-container {
-    color: white;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    padding: 2rem;
-    overflow:hidden;
-  }
-  .crystal{
-    width:100vw;
-    height:300px;
-    background:no-repeat center center/cover;
-    display: flex;
-    flex-direction:column;
-    justify-content: center;
-    position:relative;
-    align-items: center; 
-    z-index: -1;
-  }
-  .crystal img{
-    width:100%;
-    height:50%;
-    object-fit:cover;
-  }
-  /* Header */
-  h1 {
-    z-index:100;
-    font-size: 5rem;
-    background: linear-gradient(90deg, #7ed6df, #ff00ff);
-    -webkit-background-clip: text;
-    color: transparent;
-  }
-  
-  /* Input Section */
-  .input-section {
-    position: absolute; /* Layer the input on top */
-  top: 50%; /* Adjust vertical position */
-  left: 50%; /* Center horizontally */
-  transform: translateX(-50%); /* Ensure perfect center */
-  z-index: 10; /* Bring it to the front */
+  position: relative;
+  color: white;
   display: flex;
-  gap: 10px;
-  background: rgba(99, 3, 81, 0.459); /* Semi-transparent background */
-  padding: 10px;
-  border-radius: 10px; /* Rounded corners */
-  }
-  
-  .input-section input {
+  flex-direction: column;
+  align-items: center;
+  min-height: 100vh;
+  overflow: hidden;
+  padding-bottom:400px;
+}
 
-    border-radius: 10px;
-    border: none;
-    outline: none;
-    font-size:2rem;
-    background: rgba(100, 3, 97, 0.493);
-    color: white;
-    width: 700px;
+/* Background Image */
+.background-image img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  z-index: -1;
+}
+
+/* Title Styling */
+.drug-title {
+  font-size: 6rem;
+  margin-top:150px;
+  text-transform: uppercase;
+  color: black;
+  letter-spacing: 5px;
+  z-index: 10;
+  font-weight:bold;
+}
+
+/* Input Section */
+.input-section {
+  display: flex;
+  align-items: center;
+  position: relative;
+  margin-top: 2rem;
+}
+
+.input-section input {
+  width: 750px;
+  padding: 20px 40px;
+  font-size: 1.8rem;
+  border: none;
+  border-radius: 50px;
+  outline: none;
+  background: white;
+  color: #070462;
+  box-shadow: 0 5px 20px rgba(0, 0, 0, 0.2);
+}
+
+.input-section input::placeholder {
+  color: #8e8e8e;
+  font-weight: bold;
+}
+
+/* Plus Button */
+.plus-button {
+  margin-left: -80px;
+  width: 60px;
+  height: 60px;
+  font-size: 2.5rem;
+  color: white;
+  background: #04002e;
+  border: none;
+  border-radius: 50%;
+  cursor: pointer;
+  transition: transform 0.3s ease;
+}
+
+.plus-button:hover {
+  transform: scale(1.1);
+}
+
+/* Molecule List */
+.molecule-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+  margin-top: 2rem;
+}
+
+.molecule-item {
+  background: rgba(255, 255, 255, 0.2);
+  padding: 10px 20px;
+  border-radius: 25px;
+  display: flex;
+  align-items: center;
+  font-size: 1.5rem;
+  gap: 10px;
+}
+
+.remove-btn {
+  cursor: pointer;
+  color: #ff4757;
+}
+
+/* Interaction Result */
+.interaction-result {
+  margin-top: 3rem;
+  z-index: 10;
+}
+
+.interaction-result h2 {
+  font-size: 2.5rem;
+}
+
+.interaction-result p {
+  font-size: 1.2rem;
+}
+/* Drug Title with GIF Background */
+.drug-title {
+  font-size: 6rem;
+  text-transform: uppercase;
+  letter-spacing: 5px;
+  background: url("../../assets/waterbg.gif") no-repeat center center;
+  background-size: cover;
+  color: transparent;
+  -webkit-background-clip: text;
+  background-clip: text;
+  animation: moveBackground 10s linear infinite;
+}
+
+/* Animate GIF Movement Inside the Text */
+@keyframes moveBackground {
+  0% {
+    background-position: 0% 50%;
   }
-  
-  .input-section button {
-    background: #04002e;
-    color:#ffffff;
-    border: none;
-    height: 70px;
-    padding: 0.8rem 1.5rem;
-    border-radius:10px;
-    cursor: pointer;
-    transition: transform 0.3s;
-    font-weight: bold;
+  50% {
+    background-position: 100% 50%;
   }
-  
-  .input-section button:hover {
-    transform: scale(1.1);
+  100% {
+    background-position: 0% 50%;
   }
-  
-  /* Molecule List */
-  .molecule-list {
-    margin-top: 2rem;
-    display: flex;
-    gap: 1rem;
-    flex-wrap: wrap;
-  }
-  
-  .molecule-item {
-    background: rgba(255, 255, 255, 0.2);
-    padding: 0.5rem 1rem;
-    border-radius: 10px;
-    display: flex;
-    align-items: center;
-    gap: 0.5rem;
-  }
-  
-  .remove-btn {
-    cursor: pointer;
-    color: #ff4757 !important;
-  }
-  
-  /* Interaction Result */
-  .interaction-result {
-    margin-top: 3rem;
-  }
-  
-  .interaction-result h2 {
-    font-size: 2rem;
-  }
-  
-  .interaction-result p {
-    font-size: 1.2rem;
-    margin: 0.5rem 0;
-  }  
+}

@@ -2,7 +2,7 @@
 .home-container {
   text-align: center;
   color: white;
-  background: linear-gradient(180deg, #00002c, #020012);
+  background:#020012;
   min-height: 100vh;
   display: flex;
   flex-direction: column;
@@ -196,6 +196,7 @@
 }
 .cta-button:hover {
   transform: scale(2.5);
+  background-color: linear-gradient(90deg, #c7bcf4, #f9c5b4);
   box-shadow: 0px 8px 20px rgba(0, 0, 0, 0.3);
 }
 

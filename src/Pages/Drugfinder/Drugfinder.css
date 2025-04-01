@@ -4,6 +4,7 @@
   padding: 20px;
   min-height: 100vh;
   text-align: left;
+  background: linear-gradient(90deg, #c7bcf4, #f9c5b4);
 }
 
 /* Updated Search Bar Styling */
@@ -17,9 +18,10 @@
 .search-container input {
   width: 900px; /* Adjust width as needed */
   padding: 20px 30px;
+  max-height: 100px;
   font-size: 48px;
   font-weight: bold;
-  border: 6px solid #43bcce; /* Magenta border */
+  border: 10px solid #43bcce; /* Magenta border */
   border-radius: 50px;
   outline: none;
   color: white; 
@@ -48,19 +50,22 @@
 
 /* Drug Info Container */
 .drug-info {
+  background-color: #000000;
   max-width: 900px;
   margin: auto;
   text-align: left;
   padding: 20px;
   font-weight: bold;
+  border-radius: 50px;
 }
 
 /* Drug Details */
 .drug-details h3 {
-  color: #40343d;
-  font-size: 20px;
+  color: #ff00bf;
+  font-size: 30px;
   margin-bottom: 5px;
   font-weight: bold;
+  background-color: #000000;
 }
 
 .drug-details p {
