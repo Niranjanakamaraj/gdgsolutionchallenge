@@ -120,3 +120,125 @@
   color: black;
   transform: scale(1.05);
 }
+/* Tablets and Small Laptops (Max-width: 1024px) */
+@media (max-width: 1024px) {
+  .search-container input {
+    width: 80%; /* Reduce input width */
+    font-size: 36px;
+    padding: 15px 25px;
+    border-width: 8px; /* Adjust border thickness */
+  }
+
+  .search-button {
+    font-size: 36px;
+    margin-left: -60px; /* Adjust button positioning */
+  }
+
+  .drug-info {
+    max-width: 80%; /* Adjust container width */
+  }
+
+  .drug-details h3 {
+    font-size: 26px;
+  }
+
+  .drug-details p {
+    font-size: 14px;
+  }
+
+  .graph-container h2 {
+    font-size: 18px;
+  }
+
+  .save-button {
+    font-size: 14px;
+    padding: 10px 20px;
+  }
+}
+
+/* Mobile Screens (Max-width: 768px) */
+@media (max-width: 768px) {
+  .search-container {
+    flex-direction: column; /* Stack input and button */
+    align-items: center;
+  }
+
+  .search-container input {
+    width: 90%;
+    font-size: 28px;
+    padding: 12px 20px;
+    text-align: center;
+  }
+
+  .search-button {
+    font-size: 28px;
+    margin-left: 0;
+    margin-top: 10px;
+  }
+
+  .drug-info {
+    max-width: 90%;
+    padding: 15px;
+  }
+
+  .drug-details h3 {
+    font-size: 22px;
+  }
+
+  .drug-details p {
+    font-size: 12px;
+  }
+
+  .graph-container {
+    padding: 15px;
+  }
+
+  .graph-container h2 {
+    font-size: 16px;
+  }
+
+  .save-button {
+    font-size: 12px;
+    padding: 8px 16px;
+  }
+}
+
+/* Small Mobile Screens (Max-width: 480px) */
+@media (max-width: 480px) {
+  .search-container input {
+    width: 100%;
+    font-size: 24px;
+    padding: 10px 15px;
+  }
+
+  .search-button {
+    font-size: 24px;
+    width: 40px;
+    height: 40px;
+  }
+
+  .drug-info {
+    padding: 10px;
+  }
+
+  .drug-details h3 {
+    font-size: 18px;
+  }
+
+  .drug-details p {
+    font-size: 10px;
+  }
+
+  .graph-container {
+    padding: 10px;
+  }
+
+  .graph-container h2 {
+    font-size: 14px;
+  }
+
+  .save-button {
+    font-size: 10px;
+    padding: 6px 12px;
+  }
+}

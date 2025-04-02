@@ -1,10 +1,10 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import "./Drugfinder.css";
 import { Line } from "react-chartjs-2";
 import {
   Chart,
   CategoryScale,
-  LinearScale, // ✅ Register this scale
+  LinearScale,
   PointElement,
   LineElement,
   Title,
@@ -12,9 +12,10 @@ import {
   Legend,
 } from "chart.js";
 
+// Register the necessary chart components
 Chart.register(
   CategoryScale,
-  LinearScale, // ✅ Register the scale
+  LinearScale,
   PointElement,
   LineElement,
   Title,
@@ -22,11 +23,12 @@ Chart.register(
   Legend
 );
 
-
 const Drugfinder = () => {
   const [search, setSearch] = useState("");
   const [drug, setDrug] = useState(null);
+  const [predictions, setPredictions] = useState(null);
 
+  // Function to simulate fetching drug data
   const handleSearch = () => {
     if (search.toLowerCase() === "paracetamol") {
       setDrug({
@@ -42,10 +44,19 @@ const Drugfinder = () => {
         uses:
           "Used to treat headaches, muscle aches, fever, and colds.",
       });
+
+      // Simulate fetching model predictions (replace this with an actual API call)
+      setPredictions({
+        mw: 151.16, // Molecular weight (example)
+        polararea: 23.45, // Polar area (example)
+      });
     } else {
       setDrug(null);
+      setPredictions(null);
     }
   };
+
+  // Line chart data
   const data = {
     labels: ["Week 0", "Week 2", "Week 4", "Week 8", "Week 12"],
     datasets: [
@@ -82,7 +93,7 @@ const Drugfinder = () => {
       y: { beginAtZero: true, max: 50 },
     },
   };
-  
+
   return (
     <div className="drug-body">
       {/* Search Bar */}
@@ -105,7 +116,7 @@ const Drugfinder = () => {
         <div className="drug-info">
           <h1>{drug.name}</h1>
 
-          {/* Drug Details (Single Column Format) */}
+          {/* Drug Details */}
           <div className="drug-details">
             <h3 className="gradient-text">Description</h3>
             <p>{drug.description}</p>
@@ -123,9 +134,18 @@ const Drugfinder = () => {
             <p>{drug.uses}</p>
           </div>
 
-          {/* Graph Placeholder (Replace with actual graph component) */}
+          {/* Displaying Predictions */}
+          {predictions && (
+            <div className="drug-predictions">
+              <h3 className="gradient-text">Predicted Properties</h3>
+              <p><strong>Molecular Weight (MW):</strong> {predictions.mw}</p>
+              <p><strong>Polar Area:</strong> {predictions.polararea}</p>
+            </div>
+          )}
+
+          {/* Severity Graph */}
           <div className="graph-container">
-            <h2>Severity of drug</h2>
+            <h2>Severity of Drug</h2>
             <Line key={JSON.stringify(data)} data={data} options={options} />
           </div>
         </div>

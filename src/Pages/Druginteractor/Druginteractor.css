@@ -64,7 +64,7 @@
   height: 60px;
   font-size: 2.5rem;
   color: white;
-  background: #04002e;
+  background: rgba(24, 0, 69, 0.826);
   border: none;
   border-radius: 50%;
   cursor: pointer;
@@ -84,7 +84,7 @@
 }
 
 .molecule-item {
-  background: rgba(255, 255, 255, 0.2);
+  background: rgba(24, 0, 69, 0.826);
   padding: 10px 20px;
   border-radius: 25px;
   display: flex;
@@ -100,8 +100,11 @@
 
 /* Interaction Result */
 .interaction-result {
+  background-color: #04002e;
+  padding:20px;
   margin-top: 3rem;
   z-index: 10;
+  border-radius:25px;
 }
 
 .interaction-result h2 {
@@ -134,5 +137,115 @@
   }
   100% {
     background-position: 0% 50%;
+  }
+}
+@media (max-width: 1024px) {
+  .drug-title {
+    font-size: 4.5rem; /* Reduce title size */
+    margin-top: 100px; /* Adjust spacing */
+  }
+
+  .input-section input {
+    width: 80%; /* Reduce input width */
+    font-size: 1.5rem;
+  }
+
+  .plus-button {
+    width: 50px;
+    height: 50px;
+    font-size: 2rem;
+    margin-left: -60px; /* Adjust button positioning */
+  }
+
+  .molecule-item {
+    font-size: 1.3rem;
+    padding: 8px 15px;
+  }
+
+  .interaction-result h2 {
+    font-size: 2rem;
+  }
+
+  .interaction-result p {
+    font-size: 1rem;
+  }
+}
+
+/* Mobile Screens (Max-width: 768px) */
+@media (max-width: 768px) {
+  .drug-title {
+    font-size: 3.5rem; /* Further reduce title size */
+    letter-spacing: 3px;
+    margin-top: 80px;
+  }
+
+  .input-section {
+    flex-direction: column; /* Stack input and button */
+    align-items: center;
+  }
+
+  .input-section input {
+    width: 90%;
+    padding: 15px;
+    font-size: 1.3rem;
+    text-align: center;
+  }
+
+  .plus-button {
+    margin-left: 0;
+    margin-top: 10px;
+    width: 45px;
+    height: 45px;
+    font-size: 1.8rem;
+  }
+
+  .molecule-list {
+    justify-content: center; /* Center molecule list */
+  }
+
+  .molecule-item {
+    font-size: 1.2rem;
+    padding: 6px 12px;
+  }
+
+  .interaction-result h2 {
+    font-size: 1.8rem;
+  }
+
+  .interaction-result p {
+    font-size: 0.9rem;
+  }
+}
+
+/* Small Mobile Screens (Max-width: 480px) */
+@media (max-width: 480px) {
+  .drug-title {
+    font-size: 2.8rem;
+    margin-top: 50px;
+  }
+
+  .input-section input {
+    width: 100%;
+    padding: 12px;
+    font-size: 1.2rem;
+  }
+
+  .plus-button {
+    width: 40px;
+    height: 40px;
+    font-size: 1.6rem;
+  }
+
+  .molecule-item {
+    font-size: 1rem;
+    padding: 5px 10px;
+  }
+
+  .interaction-result h2 {
+    font-size: 1.5rem;
+  }
+
+  .interaction-result p {
+    font-size: 0.85rem;
   }
 }

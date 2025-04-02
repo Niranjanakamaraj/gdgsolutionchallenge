@@ -35,3 +35,15 @@ body {
     0% { transform: rotate(0deg); }
     100% { transform: rotate(360deg); }
   }  
+/* Apply initial state for scroll animation */
+.animate-on-scroll {
+  opacity: 0;
+  transform: translateY(100px);
+  transition: opacity 1s ease-out, transform 1s ease-out;
+}
+
+/* When element enters viewport, apply the animation */
+.animate-on-scroll.active {
+  opacity: 1;
+  transform: translateY(0);
+}

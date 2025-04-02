@@ -24,13 +24,14 @@
   color: transparent;
   font-weight: bold;
   font-family: cursive, sans-serif;
+  white-space: nowrap;
 }
 
 .logo img {
   width: 100px; /* Adjust logo size */
   height:100px;
   border-radius: 50%;
-  padding:20px
+  padding:10px
 }
 
 /* Navigation Links */
@@ -131,5 +132,111 @@
   .login {
     width: 80%;
     margin-top: 1rem;
+  }
+}
+/* 🔹 MEDIA QUERIES FOR ALL SCREENS */
+
+/* 🔹 Large Screens (1440px and above) */
+@media (max-width: 1440px) {
+  .logo a {
+    font-size: 3rem;
+  }
+  .logo img {
+    width: 80px;
+    height: 80px;
+  }
+  .nav-links a {
+    font-size: 1.4rem;
+  }
+}
+
+/* 🔹 Medium Screens (1024px to 1440px) */
+@media (max-width: 1024px) {
+  .logo a {
+    font-size: 2.8rem;
+  }
+  .logo img {
+    width: 75px;
+    height: 75px;
+  }
+  .nav-links {
+    gap: 1.5rem;
+  }
+  .nav-links a {
+    font-size: 1.3rem;
+  }
+}
+
+/* 🔹 Tablet Screens (768px to 1024px) */
+@media (max-width: 768px) {
+  .navbar {
+    flex-direction: column; /* Stack items */
+    text-align: center;
+  }
+  
+  .logo {
+    justify-content: center;
+    width: 100%;
+  }
+  
+  .logo a {
+    font-size: 2.5rem;
+  }
+  
+  .logo img {
+    width: 70px;
+    height: 70px;
+  }
+
+  .hamburger {
+    display: flex;
+  }
+
+  .nav-links {
+    flex-direction: column;
+    position: absolute;
+    top: 100px;
+    right: 0;
+    width: 100%;
+    background: rgba(0, 0, 0, 0.9);
+    height: 0;
+    overflow: hidden;
+    transition: height 0.4s ease;
+    align-items: center;
+  }
+
+  .nav-links.open {
+    height: auto;
+  }
+
+  .nav-links li {
+    padding: 1rem 0;
+    text-align: center;
+  }
+
+  .login {
+    width: 80%;
+    margin-top: 1rem;
+  }
+}
+
+/* 🔹 Small Mobile Screens (480px and below) */
+@media (max-width: 480px) {
+  .logo a {
+    font-size: 2rem;
+  }
+  
+  .logo img {
+    width: 60px;
+    height: 60px;
+  }
+
+  .nav-links a {
+    font-size: 1.2rem;
+  }
+
+  .login {
+    font-size: 1rem;
+    padding: 0.4rem 0.8rem;
   }
 }

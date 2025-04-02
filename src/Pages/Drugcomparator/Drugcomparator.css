@@ -162,3 +162,55 @@
   transform: scale(1.1);
   transition: transform 0.2s ease;
 }
+@media (max-width: 1024px) {
+  .comparator-container {
+    flex-direction: column; /* Stack elements if needed */
+    align-items: center;
+    text-align: center;
+  }
+
+  .comparator-header {
+    font-size: 2rem; /* Reduce heading size */
+  }
+
+  .comparator-inputs {
+    flex-direction: column; /* Stack input fields */
+    width: 90%;
+  }
+
+  .comparator-results {
+    width: 100%; /* Utilize full width */
+  }
+}
+
+/* Mobile Screens (Max-width: 768px) */
+@media (max-width: 768px) {
+  .comparator-header {
+    font-size: 1.8rem; /* Slightly smaller for better fit */
+  }
+
+  .comparator-inputs input {
+    width: 100%; /* Expand inputs for better usability */
+    font-size: 1rem; /* Adjust font size */
+  }
+
+  .comparator-results {
+    font-size: 1rem; /* Ensure readability */
+  }
+}
+
+/* Small Mobile Screens (Max-width: 480px) */
+@media (max-width: 480px) {
+  .comparator-header {
+    font-size: 1.5rem; /* Optimize heading for small screens */
+  }
+
+  .comparator-inputs {
+    gap: 10px; /* Reduce gaps for compact layout */
+  }
+
+  .comparator-results {
+    padding: 10px;
+    font-size: 0.9rem; /* Adjust result text */
+  }
+}
